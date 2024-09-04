@@ -2,8 +2,8 @@
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
-static const unsigned int borderpx       = 0;   /* border pixel of windows */
-static const int corner_radius           = 10;
+static const unsigned int borderpx       = 2;   /* border pixel of windows */
+static const int corner_radius           = 32;
 #else
 static const unsigned int borderpx       = 10;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
@@ -174,9 +174,9 @@ static char normbordercolor[]            = "#444444";
 static char normfloatcolor[]             = "#db8fd9";
 
 static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#005577";
-static char selbordercolor[]             = "#005577";
-static char selfloatcolor[]              = "#005577";
+static char selbgcolor[]                 = "#223333";
+static char selbordercolor[]             = "#223333";
+static char selfloatcolor[]              = "#223333";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
 static char titlenormbgcolor[]           = "#222222";
@@ -184,9 +184,9 @@ static char titlenormbordercolor[]       = "#444444";
 static char titlenormfloatcolor[]        = "#db8fd9";
 
 static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#005577";
-static char titleselbordercolor[]        = "#005577";
-static char titleselfloatcolor[]         = "#005577";
+static char titleselbgcolor[]            = "#223333";
+static char titleselbordercolor[]        = "#223333";
+static char titleselfloatcolor[]         = "#223333";
 
 static char tagsnormfgcolor[]            = "#bbbbbb";
 static char tagsnormbgcolor[]            = "#222222";
@@ -194,11 +194,11 @@ static char tagsnormbordercolor[]        = "#444444";
 static char tagsnormfloatcolor[]         = "#db8fd9";
 
 static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#005577";
-static char tagsselbordercolor[]         = "#005577";
-static char tagsselfloatcolor[]          = "#005577";
+static char tagsselbgcolor[]             = "#223333";
+static char tagsselbordercolor[]         = "#223333";
+static char tagsselfloatcolor[]          = "#223333";
 
-static char hidnormfgcolor[]             = "#005577";
+static char hidnormfgcolor[]             = "#223333";
 static char hidselfgcolor[]              = "#227799";
 static char hidnormbgcolor[]             = "#222222";
 static char hidselbgcolor[]              = "#222222";
@@ -869,7 +869,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "st","-f","JetBrainsMono Nerd Font Mono:size=20", NULL };
+static const char *termcmd[]  = { "st","-f","JetBrainsMono Nerd Font Mono:size=16", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
