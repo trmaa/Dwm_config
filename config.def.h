@@ -2,7 +2,7 @@
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
-static const unsigned int borderpx       = 2;   /* border pixel of windows */
+static const unsigned int borderpx       = 10;   /* border pixel of windows */
 static const int corner_radius           = 32;
 #else
 static const unsigned int borderpx       = 10;   /* border pixel of windows */
@@ -24,10 +24,10 @@ static const int scalepreview            = 4;        /* Tag preview scaling */
 static int nomodbuttons                  = 1;   /* allow client mouse button bindings that have no modifier */
 #endif // NO_MOD_BUTTONS_PATCH
 #if VANITYGAPS_PATCH
-static const unsigned int gappih         = 20;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 10;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 30;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappih         = 32;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 32;  /* vert inner gap between windows */
+static const unsigned int gappoh         = 32;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 32;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
@@ -160,11 +160,11 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "monospace 10";
+static const char font[]                 = "SourceCodePro 16";
 #else
-static const char *fonts[]               = { "monospace:size=10" };
+static const char *fonts[]               = { "SourceCodePro:size=16" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "monospace:size=10";
+static const char dmenufont[]            = "SourceCodePro:size=16";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -869,7 +869,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "st","-f","JetBrainsMono Nerd Font Mono:size=16", NULL };
+static const char *termcmd[]  = { "st","-f","jetBrainsMonoNerdFont-Medium:size=20", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
