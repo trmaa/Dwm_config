@@ -67,7 +67,7 @@ static const struct arg args[] = {
 	/* function format          argument */
 	{ wifi_essid, "%s: ",           "wlan0" },
 	{ netspeed_rx, "%sB/s ",           "wlan0" },
-	{ disk_free, " disk: %s ",           "/home/" },
+	{ disk_free, " disk: %sB",           "/home/" },
 	{ battery_perc, " bat: %s%% ",           "BAT0" },
-	{ datetime, " %s",           "%F" },
+	{ datetime, " %s",           "%F | %T" },
 };
