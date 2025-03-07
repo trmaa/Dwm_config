@@ -2,10 +2,10 @@
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
-static const unsigned int borderpx       = 10;   /* border pixel of windows */
+static const unsigned int borderpx       = 16;   /* border pixel of windows */
 static const int corner_radius           = 32;
 #else
-static const unsigned int borderpx       = 10;   /* border pixel of windows */
+static const unsigned int borderpx       = 16;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 #if BAR_BORDER_PATCH
 /* This allows the bar border size to be explicitly set separately from borderpx.
@@ -13,7 +13,7 @@ static const unsigned int borderpx       = 10;   /* border pixel of windows */
  * automatically update with setborderpx. */
 static const unsigned int barborderpx    = 0;  /* border pixel of bar */
 #endif // BAR_BORDER_PATCH
-static const unsigned int snap           = 32;  /* snap pixel */
+static const unsigned int snap           = 2;  /* snap pixel */
 #if SWALLOW_PATCH
 static const int swallowfloating         = 0;   /* 1 means swallow floating windows by default */
 #endif // SWALLOW_PATCH
@@ -24,10 +24,10 @@ static const int scalepreview            = 4;        /* Tag preview scaling */
 static int nomodbuttons                  = 1;   /* allow client mouse button bindings that have no modifier */
 #endif // NO_MOD_BUTTONS_PATCH
 #if VANITYGAPS_PATCH
-static const unsigned int gappih         = 32;  /* horiz inner gap between windows */
-static const unsigned int gappiv         = 32;  /* vert inner gap between windows */
-static const unsigned int gappoh         = 32;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 32;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappih         = 128;  /* horiz inner gap between windows */
+static const unsigned int gappiv         = 128;  /* vert inner gap between windows */
+static const unsigned int gappoh         = 128;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov         = 128;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
@@ -160,11 +160,11 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "SourceCodePro 16";
+static const char font[]                 = "JetBrainsMono Nerd Font Propo 16";
 #else
-static const char *fonts[]               = { "SourceCodePro:size=16" };
+static const char *fonts[]               = { "JetBrainsMono Nerd Font Propo:size=16:antialias=true:style=Regular" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "SourceCodePro:size=16";
+static const char dmenufont[]            = "JetBrainsMono Nerd Font Propo:size=16:antialias=true:style=Regular";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -869,7 +869,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "st","-f","jetBrainsMonoNerdFont-Medium:size=20", NULL };
+static const char *termcmd[]  = { "st","-f","JetBrainsMono Nerd Font Propo:style:Regular:size=21:antialias=true", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -1078,7 +1078,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
-	//{ MODKEY,                       XK_c,          setlayout,              {.v = &layouts[3]} },
+	{ MODKEY,                       XK_c,          setlayout,              {.v = &layouts[3]} },
 	#if FLEXTILE_DELUXE_LAYOUT
 	{ MODKEY|ControlMask,           XK_t,          rotatelayoutaxis,       {.i = +1 } },   /* flextile, 1 = layout axis */
 	{ MODKEY|ControlMask,           XK_Tab,        rotatelayoutaxis,       {.i = +2 } },   /* flextile, 2 = master axis */
