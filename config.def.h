@@ -2,10 +2,10 @@
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
-static const unsigned int borderpx       = 16;   /* border pixel of windows */
+static const unsigned int borderpx       = 0;   /* border pixel of windows */
 static const int corner_radius           = 32;
 #else
-static const unsigned int borderpx       = 16;   /* border pixel of windows */
+static const unsigned int borderpx       = 0;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 #if BAR_BORDER_PATCH
 /* This allows the bar border size to be explicitly set separately from borderpx.
@@ -15,7 +15,7 @@ static const unsigned int barborderpx    = 0;  /* border pixel of bar */
 #endif // BAR_BORDER_PATCH
 static const unsigned int snap           = 2;  /* snap pixel */
 #if SWALLOW_PATCH
-static const int swallowfloating         = 0;   /* 1 means swallow floating windows by default */
+static const int swallowfloating         = 10;   /* 1 means swallow floating windows by default */
 #endif // SWALLOW_PATCH
 #if BAR_TAGPREVIEW_PATCH
 static const int scalepreview            = 4;        /* Tag preview scaling */
@@ -56,7 +56,7 @@ static const int showtab                 = showtab_auto;        /* Default tab b
 static const int toptab                  = False;               /* False means bottom tab bar */
 #endif // TAB_PATCH
 #if BAR_HEIGHT_PATCH
-static const int bar_height              = 20;   /* 0 means derive from font, >= 1 explicit height */
+static const int bar_height              = 22;   /* 0 means derive from font, >= 1 explicit height */
 #endif // BAR_HEIGHT_PATCH
 #if BAR_PADDING_PATCH
 static const int vertpad                 = 10;  /* vertical padding of bar */
@@ -160,53 +160,53 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "JetBrainsMono Nerd Font Propo 16";
+static const char font[]                 = "Classic Console Neue 20";
 #else
-static const char *fonts[]               = { "JetBrainsMono Nerd Font Propo:size=16:antialias=true:style=Regular" };
+static const char *fonts[]               = { "Classic Console Neue:size=20:style=Regular" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "JetBrainsMono Nerd Font Propo:size=16:antialias=true:style=Regular";
+static const char dmenufont[]            = "Classic Console Neue:size=20:style=Regular";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#bbbbbb";
-static char normbgcolor[]                = "#222222";
-static char normbordercolor[]            = "#444444";
-static char normfloatcolor[]             = "#db8fd9";
+static char normfgcolor[]                = "#ffbbbb";
+static char normbgcolor[]                = "#000000";
+static char normbordercolor[]            = "#dddddd";
+static char normfloatcolor[]             = "#ff4444";
 
-static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#223333";
-static char selbordercolor[]             = "#223333";
-static char selfloatcolor[]              = "#223333";
+static char selfgcolor[]                 = "#ffbbbb";
+static char selbgcolor[]                 = "#000000";
+static char selbordercolor[]             = "#ffdddd";
+static char selfloatcolor[]              = "#ff4444";
 
-static char titlenormfgcolor[]           = "#bbbbbb";
-static char titlenormbgcolor[]           = "#222222";
-static char titlenormbordercolor[]       = "#444444";
-static char titlenormfloatcolor[]        = "#db8fd9";
+static char titlenormfgcolor[]           = "#ffbbbb";
+static char titlenormbgcolor[]           = "#000000";
+static char titlenormbordercolor[]       = "#dddddd";
+static char titlenormfloatcolor[]        = "#ff4444";
 
-static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#223333";
-static char titleselbordercolor[]        = "#223333";
-static char titleselfloatcolor[]         = "#223333";
+static char titleselfgcolor[]            = "#ffeeee";
+static char titleselbgcolor[]            = "#000000";
+static char titleselbordercolor[]        = "#dddddd";
+static char titleselfloatcolor[]         = "#ff4444";
 
-static char tagsnormfgcolor[]            = "#bbbbbb";
-static char tagsnormbgcolor[]            = "#222222";
-static char tagsnormbordercolor[]        = "#444444";
-static char tagsnormfloatcolor[]         = "#db8fd9";
+static char tagsnormfgcolor[]            = "#ffbbbb";
+static char tagsnormbgcolor[]            = "#000000";
+static char tagsnormbordercolor[]        = "#dddddd";
+static char tagsnormfloatcolor[]         = "#ff4444";
 
-static char tagsselfgcolor[]             = "#eeeeee";
-static char tagsselbgcolor[]             = "#223333";
-static char tagsselbordercolor[]         = "#223333";
-static char tagsselfloatcolor[]          = "#223333";
+static char tagsselfgcolor[]             = "#ffeeee";
+static char tagsselbgcolor[]             = "#000000";
+static char tagsselbordercolor[]         = "#dddddd";
+static char tagsselfloatcolor[]          = "#ff4444";
 
-static char hidnormfgcolor[]             = "#223333";
-static char hidselfgcolor[]              = "#227799";
-static char hidnormbgcolor[]             = "#222222";
-static char hidselbgcolor[]              = "#222222";
+static char hidnormfgcolor[]             = "#773333";
+static char hidselfgcolor[]              = "#000000";
+static char hidnormbgcolor[]             = "#dddddd";
+static char hidselbgcolor[]              = "#ff4444";
 
-static char urgfgcolor[]                 = "#bbbbbb";
-static char urgbgcolor[]                 = "#222222";
-static char urgbordercolor[]             = "#ff0000";
-static char urgfloatcolor[]              = "#db8fd9";
+static char urgfgcolor[]                 = "#ffbbbb";
+static char urgbgcolor[]                 = "#000000";
+static char urgbordercolor[]             = "#dddddd";
+static char urgfloatcolor[]              = "#ff4444";
 
 #if RENAMED_SCRATCHPADS_PATCH
 static char scratchselfgcolor[]          = "#FFF7D4";
@@ -258,7 +258,7 @@ static char selfloatbgcolor[]            = "#117799";
 
 #if BAR_ALPHA_PATCH
 static const unsigned int baralpha = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
+static const unsigned int borderalpha = 0x80;
 static const unsigned int alphas[][3] = {
 	/*                       fg      bg        border     */
 	[SchemeNorm]         = { OPAQUE, baralpha, borderalpha },
@@ -869,7 +869,8 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "st","-f","JetBrainsMono Nerd Font Propo:style:Regular:size=21:antialias=true", NULL };
+static const char *termcmd[]  = { "st","-f","Classic Console Neue:style=Regular:size=25", NULL };
+static const char *firefox[]  = { "firefox", NULL };
 
 #if BAR_STATUSCMD_PATCH
 #if BAR_DWMBLOCKS_PATCH
@@ -900,7 +901,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_Escape,     setkeymode,             {.ui = COMMANDMODE} },
 	#endif // KEYMODES_PATCH
 	{ MODKEY,                       XK_p,          spawn,                  {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return,     spawn,                  {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_q,     spawn,                  {.v = termcmd } },
+	{ MODKEY|ShiftMask,             XK_f,     spawn,                  {.v = firefox } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
 	{ MODKEY|ControlMask,           XK_Return,     riospawn,               {.v = termcmd } },
@@ -1059,9 +1061,9 @@ static const Key keys[] = {
 	#if SELFRESTART_PATCH
 	{ MODKEY|ShiftMask,             XK_r,          self_restart,           {0} },
 	#endif // SELFRESTART_PATCH
-	{ MODKEY|ShiftMask,             XK_q,          quit,                   {0} },
+	{ MODKEY|ShiftMask,             XK_Return,          quit,                   {0} },
 	#if RESTARTSIG_PATCH
-	{ MODKEY|ControlMask|ShiftMask, XK_q,          quit,                   {1} },
+	{ MODKEY|ControlMask|ShiftMask, XK_Return,          quit,                   {1} },
 	#endif // RESTARTSIG_PATCH
 	#if FOCUSURGENT_PATCH
 	{ MODKEY,                       XK_u,          focusurgent,            {0} },
