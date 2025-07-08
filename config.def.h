@@ -884,7 +884,7 @@ static const StatusCmd statuscmds[] = {
 	{ "notify-send Battery$BUTTON", 3 },
 };
 /* test the above with: xsetroot -name "$(printf '\x01Volume |\x02 CPU |\x03 Battery')" */
-static const char *statuscmd[] = { "/bin/sh", "-c", NULL, NULL };
+static const char *statuscmd[] = { "slstatus", NULL };
 #endif // BAR_DWMBLOCKS_PATCH
 #endif // BAR_STATUSCMD_PATCH
 

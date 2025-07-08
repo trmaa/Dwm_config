@@ -65,8 +65,8 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ wifi_essid, "%s: ",           "wlan0" },
-	{ netspeed_rx, "%sB/s ",           "wlan0" },
+	{ run_command, "WiFi: %s | ", "nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d':' -f2" },
+	{ run_command, "Speed: %sB/s | ", "nmcli -t -f rate dev wifi list | grep -m1 . | cut -d':' -f2" },
 	{ disk_free, " disk: %s",           "/home/" },
 	{ disk_total, "B/%sB",           "/home/" },
 	{ battery_perc, " bat: %s%% ",           "BAT0" },
