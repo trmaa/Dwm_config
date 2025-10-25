@@ -65,10 +65,10 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */
-	{ run_command, "WiFi: %s | ", "nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d':' -f2" },
-	{ run_command, "Speed: %sB/s | ", "nmcli -t -f rate dev wifi list | grep -m1 . | cut -d':' -f2" },
+	{ run_command, "wifi: %s | ", "nmcli -t -f active,ssid dev wifi | grep '^yes' | cut -d':' -f2" },
+	//{ run_command, "Speed: %sB/s | ", "nmcli -t -f rate dev wifi list | grep -m1 . | cut -d':' -f2" },
 	{ disk_free, " disk: %s",           "/home/" },
-	{ disk_total, "B/%sB",           "/home/" },
+	{ disk_total, "B/%sB |",           "/home/" },
 	{ battery_perc, " bat: %s%% ",           "BAT0" },
-	{ datetime, " %s",           "%F" },
+	//{ datetime, " %s",           "%F" },
 };

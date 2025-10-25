@@ -160,53 +160,53 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "Classic Console Neue 20";
+static const char font[]                 = "BigBlueTerm437 Nerd Font 15";
 #else
-static const char *fonts[]               = { "Classic Console Neue:size=20:style=Regular" };
+static const char *fonts[]               = { "BigBlueTerm437 Nerd Font:size=15:style=Bold" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "Classic Console Neue:size=20:style=Regular";
+static const char dmenufont[]            = "BigBlueTerm437 Nerd Font:size=15:style=Bold";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#ffbbbb";
+static char normfgcolor[]                = "#ffffff";
 static char normbgcolor[]                = "#000000";
-static char normbordercolor[]            = "#dddddd";
-static char normfloatcolor[]             = "#ff4444";
+static char normbordercolor[]            = "#333333";
+static char normfloatcolor[]             = "#333333";
 
-static char selfgcolor[]                 = "#ffbbbb";
-static char selbgcolor[]                 = "#000000";
-static char selbordercolor[]             = "#ffdddd";
-static char selfloatcolor[]              = "#ff4444";
+static char selfgcolor[]                 = "#bbbbbb";
+static char selbgcolor[]                 = "#333333";
+static char selbordercolor[]             = "#333333";
+static char selfloatcolor[]              = "#333333";
 
-static char titlenormfgcolor[]           = "#ffbbbb";
-static char titlenormbgcolor[]           = "#000000";
-static char titlenormbordercolor[]       = "#dddddd";
-static char titlenormfloatcolor[]        = "#ff4444";
+static char titlenormfgcolor[]           = "#ffffff";
+static char titlenormbgcolor[]           = "#333333";
+static char titlenormbordercolor[]       = "#333333";
+static char titlenormfloatcolor[]        = "#333333";
 
-static char titleselfgcolor[]            = "#ffeeee";
-static char titleselbgcolor[]            = "#000000";
-static char titleselbordercolor[]        = "#dddddd";
-static char titleselfloatcolor[]         = "#ff4444";
+static char titleselfgcolor[]            = "#ffffff";
+static char titleselbgcolor[]            = "#333333";
+static char titleselbordercolor[]        = "#333333";
+static char titleselfloatcolor[]         = "#333333";
 
-static char tagsnormfgcolor[]            = "#ffbbbb";
+static char tagsnormfgcolor[]            = "#bbbbbb";
 static char tagsnormbgcolor[]            = "#000000";
-static char tagsnormbordercolor[]        = "#dddddd";
-static char tagsnormfloatcolor[]         = "#ff4444";
+static char tagsnormbordercolor[]        = "#333333";
+static char tagsnormfloatcolor[]         = "#333333";
 
-static char tagsselfgcolor[]             = "#ffeeee";
-static char tagsselbgcolor[]             = "#000000";
-static char tagsselbordercolor[]         = "#dddddd";
-static char tagsselfloatcolor[]          = "#ff4444";
+static char tagsselfgcolor[]             = "#ffffff";
+static char tagsselbgcolor[]             = "#333333";
+static char tagsselbordercolor[]         = "#333333";
+static char tagsselfloatcolor[]          = "#333333";
 
-static char hidnormfgcolor[]             = "#773333";
+static char hidnormfgcolor[]             = "#bbbbbb";
 static char hidselfgcolor[]              = "#000000";
-static char hidnormbgcolor[]             = "#dddddd";
-static char hidselbgcolor[]              = "#ff4444";
+static char hidnormbgcolor[]             = "#333333";
+static char hidselbgcolor[]              = "#333333";
 
-static char urgfgcolor[]                 = "#ffbbbb";
+static char urgfgcolor[]                 = "#bbbbbb";
 static char urgbgcolor[]                 = "#000000";
-static char urgbordercolor[]             = "#dddddd";
-static char urgfloatcolor[]              = "#ff4444";
+static char urgbordercolor[]             = "#333333";
+static char urgfloatcolor[]              = "#333333";
 
 #if RENAMED_SCRATCHPADS_PATCH
 static char scratchselfgcolor[]          = "#FFF7D4";
@@ -451,7 +451,7 @@ static char *tagicons[][NUMTAGS] =
 {
 	[DEFAULT_TAGS]        = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
 	[ALTERNATIVE_TAGS]    = { "A", "B", "C", "D", "E", "F", "G", "H", "I" },
-	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
+	[ALT_TAGS_DECORATION] = { "<c>", "<$>", "<b>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };
 
 #if BAR_TAGGRID_PATCH
@@ -869,7 +869,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "st","-f","Classic Console Neue:style=Regular:size=25", NULL };
+static const char *termcmd[]  = { "st","-f","BigBlueTerm437 Nerd Font:style=Bold:size=20", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 
 #if BAR_STATUSCMD_PATCH
