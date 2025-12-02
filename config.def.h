@@ -160,11 +160,11 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "BigBlueTerm437 Nerd Font 15";
+static const char font[]                 = "JetBrainsMono Nerd Font 15";
 #else
-static const char *fonts[]               = { "BigBlueTerm437 Nerd Font:size=15:style=Bold" };
+static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=15:style=Bold" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "BigBlueTerm437 Nerd Font:size=15:style=Bold";
+static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=15:style=Bold";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -869,7 +869,7 @@ static const char *dmenucmd[] = {
 	#endif // BAR_DMENUMATCHTOP_PATCH
 	NULL
 };
-static const char *termcmd[]  = { "st","-f","BigBlueTerm437 Nerd Font:style=Bold:size=20", NULL };
+static const char *termcmd[]  = { "st","-f","JetBrainsMono Nerd Font:style=Bold:size=20", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 
 #if BAR_STATUSCMD_PATCH
