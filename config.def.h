@@ -2,7 +2,7 @@
 
 /* appearance */
 #if ROUNDED_CORNERS_PATCH
-static const unsigned int borderpx       = 0;   /* border pixel of windows */
+static const unsigned int borderpx       = 8;   /* border pixel of windows */
 static const int corner_radius           = 32;
 #else
 static const unsigned int borderpx       = 0;   /* border pixel of windows */
@@ -11,9 +11,9 @@ static const unsigned int borderpx       = 0;   /* border pixel of windows */
 /* This allows the bar border size to be explicitly set separately from borderpx.
  * If left as 0 then it will default to the borderpx value of the monitor and will
  * automatically update with setborderpx. */
-static const unsigned int barborderpx    = 0;  /* border pixel of bar */
+static const unsigned int barborderpx    = 4;  /* border pixel of bar */
 #endif // BAR_BORDER_PATCH
-static const unsigned int snap           = 2;  /* snap pixel */
+static const unsigned int snap           = 32;  /* snap pixel */
 #if SWALLOW_PATCH
 static const int swallowfloating         = 10;   /* 1 means swallow floating windows by default */
 #endif // SWALLOW_PATCH
@@ -175,7 +175,7 @@ static char normfloatcolor[]             = "#333333";
 
 static char selfgcolor[]                 = "#bbbbbb";
 static char selbgcolor[]                 = "#333333";
-static char selbordercolor[]             = "#333333";
+static char selbordercolor[]             = "#aa0000";
 static char selfloatcolor[]              = "#333333";
 
 static char titlenormfgcolor[]           = "#ffffff";
